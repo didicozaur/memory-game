@@ -84,6 +84,7 @@ const cardsArr = [
 cardsArr.sort(() => 0.5 - Math.random());
 
 const grid = document.querySelector("#grid");
+const cardsChosen = [];
 
 console.log("grid");
 
@@ -91,14 +92,19 @@ function createBoard() {
   for (let i = 0; i < cardsArr.length; i++) {
     const card = document.createElement("img");
     card.setAttribute("src", "images/question1.jpg");
-    card.setAttribute("data-id", "i");
+    card.setAttribute("data-id", i);
     card.addEventListener("click", turnCard);
     grid.appendChild(card);
     console.log(card, i);
   }
 }
+
 createBoard();
 
 function turnCard() {
-  console.log("clicked");
+  const cardId = this.getAttribute("data-id");
+
+  cardsChosen.push(cardsArr[cardId].name);
+  console.log("clicked", cardId);
+  console.log(cardsChosen);
 }
