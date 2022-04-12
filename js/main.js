@@ -1,83 +1,67 @@
 const cardsArr = [
   {
     name: "elephant",
-    img: "images/elephant.jpg",
-  },
-  {
-    name: "fox",
-    img: "images/fox.jpg",
+    img: "images/cards/elephant.jpg",
   },
   {
     name: "giraffe",
-    img: "images/giraffe.jpg",
+    img: "images/cards/giraffe.jpg",
   },
   {
     name: "horse",
-    img: " images/horse.jpg",
+    img: " images/cards/horse.jpg",
   },
   {
     name: "hummingbird",
-    img: "images/hummingbird.jpg",
-  },
-  {
-    name: "owl",
-    img: "images/owl.jpg",
+    img: "images/cards/hummingbird.jpg",
   },
   {
     name: "parrot",
-    img: "images/parrot.jpg",
+    img: "images/cards/parrot.jpg",
   },
   {
     name: "squirrel",
-    img: "images/squirrel",
+    img: "images/cards/squirrel",
   },
   {
     name: "two birds",
-    img: "images/two birds.jpg",
+    img: "images/cards/two birds.jpg",
   },
   {
     name: "wood-pecker",
-    img: "images/wood-pecker.jpg",
+    img: "images/cards/wood-pecker.jpg",
   },
   {
     name: "elephant",
-    img: "images/elephant.jpg",
-  },
-  {
-    name: "fox",
-    img: "images/fox.jpg",
+    img: "images/cards/elephant.jpg",
   },
   {
     name: "giraffe",
-    img: "images/giraffe.jpg",
+    img: "images/cards/giraffe.jpg",
   },
   {
     name: "horse",
-    img: " images/horse.jpg",
+    img: " images/cards/horse.jpg",
   },
   {
     name: "hummingbird",
-    img: "images/hummingbird.jpg",
-  },
-  {
-    name: "owl",
-    img: "images/owl.jpg",
+    img: "images/cards/hummingbird.jpg",
   },
   {
     name: "parrot",
-    img: "images/parrot.jpg",
+    img: "images/cards/parrot.jpg",
   },
   {
     name: "squirrel",
-    img: "images/squirrel",
+    img: "images/cards/squirrel",
   },
   {
     name: "two birds",
-    img: "images/two birds.jpg",
+    img: "images/cards/two birds.jpg",
   },
   {
     name: "wood-pecker",
-    img: "images/wood-pecker.jpg",
+    img: "images/cards/wood-pecker.jpg",
   },
 ];
 
