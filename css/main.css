@@ -19,24 +19,32 @@ html {
   font-weight: normal;
   font-size: 4em;
 }
-.game-info {
+.time,
+.flips {
   color: #b34665;
   font-family: Lobster, serif;
   font-size: 1.5em;
   text-align: center;
+  margin: 0 10px;
 }
 
+.game-info {
+  display: flex;
+  justify-content: center;
+  width: 660px;
+  margin: 10px auto;
+}
 body {
   margin: 0;
   background: radial-gradient(#fbeec1, #e8a87c);
 }
 
 #grid {
-  margin: 10px auto;
-  width: 440px;
+  margin: 0 auto;
+  width: 660px;
   height: 440px;
-  display: flex;
   flex-wrap: wrap;
+  display: none;
 }
 
 img {
@@ -48,21 +56,35 @@ img {
   transform: scale(1);
   transform-style: preserve-3d;
 }
+#instructions {
+  margin: 0 auto;
+  width: 660px;
+  color: #874356;
+  font-family: Lobster, serif;
+  font-weight: normal;
+  font-size: 1.5em;
+}
 
-#start-btn {
+.button {
   background-color: #fbeec1;
   font-family: Lobster, serif;
   font-size: 1.5em;
   color: #874356;
   text-align: center;
-  margin: 10px auto;
-  padding: 8px 24px;
+  margin: 0 10px;
+  padding: 8px 16px;
   border-radius: 10px;
-  display: block;
+  display: inline-block;
   transition: all 0.2s ease-out;
 }
 
-#start-btn:hover {
+.button:hover {
   background-color: #874356;
   color: #fbeec1;
+}
+.buttons {
+  display: flex;
+  justify-content: center;
+  width: 660px;
+  margin: 10px auto;
 }
