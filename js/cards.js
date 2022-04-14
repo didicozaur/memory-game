@@ -64,3 +64,5 @@ const cardsArr = [
     img: "images/cards/wood-pecker.jpg",
   },
 ];
+
+cardsArr.sort(() => 0.5 - Math.random());
