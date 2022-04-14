@@ -16,11 +16,26 @@
   </head>
   <body>
     <h1 class="title">Find the Match</h1>
-
-    <div class="game-info">Time: <span id="time-remaining">60</span></div>
-    <div class="game-info">Flips: <span id="flips">0</span></div>
+    <div class="game-info">
+      <div class="time">Time: <span id="time-remaining">90</span></div>
+      <div class="flips">Flips: <span id="flips">0</span></div>
+    </div>
     <div id="grid"></div>
-    <button id="start-btn" onclick="startCountdown()">Start</button>
+    <div id="instructions">
+      <p>
+        This is a memory game. It requires observation, concentration and a good
+        memory to win. Press the Start button to begin. You have 90 seconds to
+        find all the pairs and most importantly try to have as few flips as
+        possible. Press Try Again if you can't find all the cards the given
+        time. Have fun!
+      </p>
+    </div>
+    <div class="buttons">
+      <button class="button" id="start-btn" onclick="startCountdown()">
+        Start Time
+      </button>
+      <button class="button" onclick="location.reload()">Try again</button>
+    </div>
     <script src="./js/cards.js"></script>
     <script src="./js/main.js"></script>
   </body>
