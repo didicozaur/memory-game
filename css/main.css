@@ -48,3 +48,21 @@ img {
   transform: scale(1);
   transform-style: preserve-3d;
 }
+
+#start-btn {
+  background-color: #fbeec1;
+  font-family: Lobster, serif;
+  font-size: 1.5em;
+  color: #874356;
+  text-align: center;
+  margin: 10px auto;
+  padding: 8px 24px;
+  border-radius: 10px;
+  display: block;
+  transition: all 0.2s ease-out;
+}
+
+#start-btn:hover {
+  background-color: #874356;
+  color: #fbeec1;
+}
