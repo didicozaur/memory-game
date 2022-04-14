@@ -9,24 +9,29 @@ let cardsChosenIds = [];
 const cardsWon = [];
 
 let flipsCount = 0;
+let intervalId;
 
 function startCountdown() {
   let counter = 60;
-  setInterval(function () {
+  intervalId = setInterval(function () {
     counter--;
     if (counter >= 0) {
       time.innerHTML = counter;
     }
+    if (cardsWon.length == cardsArr.length / 2) {
+      title.innerHTML = "Congratulation! You found all the matches!";
+      stopCountdown();
+    }
     if (counter === 0) {
       title.innerHTML = "Game Over";
-      //const cards = document.querySelectorAll("img");
-      //cards.removeEventListener("click", turnCard);
-
       setTimeout(function () {
         title.innerHTML = "Find the Match";
       }, 5000);
     }
   }, 1000);
+}
+function stopCountdown() {
+  clearInterval(intervalId);
 }
 
 function checkForMatch() {
@@ -41,14 +46,12 @@ function checkForMatch() {
   if (clickedFirstCard === clickedSecondCard) {
     cards[clickedFirstId].removeEventListener("click", turnCard);
     cards[clickedSecondId].removeEventListener("click", turnCard);
-    console.log("You found a match!");
+    title.innerHTML = "You found a match!";
     cardsChosenIds = [];
     cardsChosen = [];
-
     cardsWon.push(clickedFirstCard);
-    console.log(cardsWon.length, cardsArr.length / 2);
   } else if (cardsWon.length == cardsArr.length / 2) {
-    console.log("Congratulation!! You won!");
+    stopCountdown();
   } else {
     setTimeout(function () {
       cards[clickedFirstId].setAttribute("src", "images/question1.jpg");
@@ -56,7 +59,7 @@ function checkForMatch() {
 
       cardsChosenIds = [];
       cardsChosen = [];
-      console.log("Sorry, try again!");
+      title.innerHTML = "Sorry, try again!";
     }, 500);
   }
 }
