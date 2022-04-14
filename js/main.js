@@ -1,18 +1,24 @@
 const grid = document.querySelector("#grid");
+const instructions = document.querySelector("#instructions");
 let time = document.querySelector("#time-remaining");
 let flips = document.querySelector("#flips");
 const startButtom = document.querySelector("#start-btn");
 const title = document.querySelector(".title");
-
+const tryAgainButton = document.getElementsByClassName(".try-again");
 let cardsChosen = [];
 let cardsChosenIds = [];
 const cardsWon = [];
-
 let flipsCount = 0;
 let intervalId;
 
 function startCountdown() {
-  let counter = 60;
+  grid.style.display = "flex";
+  instructions.style.display = "none";
+  const cards = document.querySelectorAll("img");
+  cards.forEach((card) => {
+    card.addEventListener("click", turnCard);
+  });
+  let counter = 90;
   intervalId = setInterval(function () {
     counter--;
     if (counter >= 0) {
@@ -24,6 +30,10 @@ function startCountdown() {
     }
     if (counter === 0) {
       title.innerHTML = "Game Over";
+      cards.forEach((card) => {
+        card.removeEventListener("click", turnCard);
+      });
+
       setTimeout(function () {
         title.innerHTML = "Find the Match";
       }, 5000);
@@ -36,7 +46,6 @@ function stopCountdown() {
 
 function checkForMatch() {
   const cards = document.querySelectorAll("img");
-
   let clickedFirstCard = cardsChosen[0];
   let clickedSecondCard = cardsChosen[1];
 
@@ -81,7 +90,6 @@ function createBoard() {
     const card = document.createElement("img");
     card.setAttribute("src", "images/question1.jpg");
     card.setAttribute("data-id", i);
-    card.addEventListener("click", turnCard);
     grid.appendChild(card);
   }
 }
